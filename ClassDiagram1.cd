@@ -1,14 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="MyPhotoshop.LighteningFilter">
-    <Position X="7.25" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Filters\LighteningFilter.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="MyPhotoshop.ParametrizedFilter&lt;TParameters&gt;">
-    <Position X="11" Y="1.25" Width="2" />
+    <Position X="11.25" Y="2" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Filters\ParametrizedFilter.cs</FileName>
@@ -18,15 +11,8 @@
   <Class Name="MyPhotoshop.PixelFilter&lt;TParameters&gt;">
     <Position X="8.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAABAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAEAgAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Filters\PixelFilter.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="MyPhotoshop.GrayscaleFilter">
-    <Position X="9.75" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Filters\GrayscaleFilter.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MyPhotoshop.LighteningParameters" Collapsed="true">
