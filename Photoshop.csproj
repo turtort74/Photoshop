@@ -11,6 +11,21 @@
     <AssemblyName>MyPhotoshop</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -20,7 +35,7 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>ARM64</PlatformTarget>
     <Externalconsole>true</Externalconsole>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
@@ -45,14 +60,15 @@
   <ItemGroup>
     <Compile Include="Data\Pixel.cs" />
     <Compile Include="Filters\EmptyParameters.cs" />
-    <Compile Include="Filters\IParametrs.cs" />
+    <Compile Include="Filters\Parameters\IParametrs.cs" />
     <Compile Include="Filters\LighteningParameters.cs" />
-    <Compile Include="Filters\ParameterInfo.cs" />
-    <Compile Include="Filters\ParametrizedFilter.cs" />
+    <Compile Include="Filters\Parameters\ParameterInfo.cs" />
+    <Compile Include="Filters\Parameters\ParametersExtensions.cs" />
+    <Compile Include="Filters\Parameters\ParametrizedFilter.cs" />
     <Compile Include="Filters\PixelFilter.cs" />
     <Compile Include="Filters\Tranform\FreeTransformer.cs" />
     <Compile Include="Filters\Tranform\ITransformer.cs" />
-    <Compile Include="Filters\Tranform\RotationParameters.cs" />
+    <Compile Include="Filters\RotationParameters.cs" />
     <Compile Include="Filters\Tranform\RotationTransformer.cs" />
     <Compile Include="Filters\Tranform\TransformFilter.cs" />
     <Compile Include="Filters\Tranform\TransformFilter{TParameters}.cs" />
@@ -75,5 +91,16 @@
   <ItemGroup>
     <Content Include="Tasks.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
 </Project>
