@@ -7,15 +7,15 @@
       <FileName>Filters\LighteningFilter.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MyPhotoshop.ParametrizedFilter">
+  <Class Name="MyPhotoshop.ParametrizedFilter&lt;TParameters&gt;">
     <Position X="11" Y="1.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Filters\ParametrizedFilter.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.425" />
   </Class>
-  <Class Name="MyPhotoshop.PixelFilter">
+  <Class Name="MyPhotoshop.PixelFilter&lt;TParameters&gt;">
     <Position X="8.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAABAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>

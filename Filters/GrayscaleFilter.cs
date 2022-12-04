@@ -1,17 +1,13 @@
-using System;
-
 namespace MyPhotoshop
 {
-	public class GrayscaleFilter : PixelFilter
+	public class GrayscaleFilter : PixelFilter<EmptyParameters>
 	{
-        public  GrayscaleFilter() : base(new EmptyParameters()) { }
-		
-		public override string ToString ()
+        public override string ToString ()
 		{
 			return "Черно-белое";
 		}
 
-        protected override Pixel ProcessPixel(Pixel original, IParametrs parameters)
+        protected override Pixel ProcessPixel(Pixel original, EmptyParameters parameters)
         {
             var average = (original.R + original.G + original.B) / 3;
             return new Pixel(average, average, average);

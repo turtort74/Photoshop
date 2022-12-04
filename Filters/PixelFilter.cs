@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MyPhotoshop
+﻿namespace MyPhotoshop
 {
-    abstract public class PixelFilter : ParametrizedFilter
+    abstract public class PixelFilter<TParameters> : ParametrizedFilter<TParameters>
+        where TParameters : IParametrs, new ()
     {
-        public PixelFilter (IParametrs parameters) : base(parameters) { }
-        public override Photo Process(Photo original, IParametrs values)
+        public override Photo Process(Photo original, TParameters values)
         {
             var result = new Photo(original.width, original.height);
             for (int x = 0; x < result.width; x++)
@@ -22,6 +16,6 @@ namespace MyPhotoshop
             return result;
         }
 
-        protected abstract Pixel ProcessPixel(Pixel original, IParametrs parameters);
+        protected abstract Pixel ProcessPixel(Pixel original, TParameters parameters);
     }
 }
