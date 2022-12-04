@@ -51,12 +51,6 @@
     <Compile Include="Filters\ParameterInfo.cs" />
     <Compile Include="Filters\ParametrizedFilter.cs" />
     <Compile Include="Filters\PixelFilter.cs" />
-    <Compile Include="Installer1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Installer1.Designer.cs">
-      <DependentUpon>Installer1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="Window\MainWindow.cs">
       <SubType>Form</SubType>
@@ -72,13 +66,9 @@
     <None Include="cat.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Tasks.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Installer1.resx">
-      <DependentUpon>Installer1.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
 </Project>
