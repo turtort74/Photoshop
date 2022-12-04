@@ -6,23 +6,22 @@ using System.Threading.Tasks;
 
 namespace MyPhotoshop
 {
-    abstract public class PixelFilter : IFilter
+    abstract public class PixelFilter : ParametrizedFilter
     {
-        public abstract ParameterInfo[] GetParameters();
-
-        public Photo Process(Photo original, double[] parameters)
+        public PixelFilter (IParametrs parameters) : base(parameters) { }
+        public override Photo Process(Photo original, IParametrs values)
         {
             var result = new Photo(original.width, original.height);
             for (int x = 0; x < result.width; x++)
             {
                 for (int y = 0; y < result.height; y++)
                 {
-                    result[x, y] = ProcessPixel(original[x, y], parameters);
+                    result[x, y] = ProcessPixel(original[x, y], values);
                 }
             }
             return result;
         }
 
-        protected abstract Pixel ProcessPixel(Pixel original, double[] parameters);
+        protected abstract Pixel ProcessPixel(Pixel original, IParametrs parameters);
     }
 }

@@ -36,15 +36,27 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Pixel.cs" />
+    <Compile Include="Filters\EmptyParameters.cs" />
     <Compile Include="Filters\GrayscaleFilter.cs" />
+    <Compile Include="Filters\IParametrs.cs" />
+    <Compile Include="Filters\LighteningParameters.cs" />
     <Compile Include="Filters\ParameterInfo.cs" />
+    <Compile Include="Filters\ParametrizedFilter.cs" />
     <Compile Include="Filters\PixelFilter.cs" />
+    <Compile Include="Installer1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Installer1.Designer.cs">
+      <DependentUpon>Installer1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="Window\MainWindow.cs">
       <SubType>Form</SubType>
@@ -63,5 +75,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Tasks.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Installer1.resx">
+      <DependentUpon>Installer1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
