@@ -35,7 +35,7 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>ARM64</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <Externalconsole>true</Externalconsole>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
@@ -60,11 +60,14 @@
   <ItemGroup>
     <Compile Include="Data\Pixel.cs" />
     <Compile Include="Filters\EmptyParameters.cs" />
+    <Compile Include="Filters\Parameters\IParametersHandler.cs" />
     <Compile Include="Filters\Parameters\IParametrs.cs" />
     <Compile Include="Filters\LighteningParameters.cs" />
     <Compile Include="Filters\Parameters\ParameterInfo.cs" />
-    <Compile Include="Filters\Parameters\ParametersExtensions.cs" />
     <Compile Include="Filters\Parameters\ParametrizedFilter.cs" />
+    <Compile Include="Filters\Parameters\ExpressionParametersHandler .cs" />
+    <Compile Include="Filters\Parameters\StaticParametersHandler .cs" />
+    <Compile Include="Filters\Parameters\SimpleParametersHandler.cs" />
     <Compile Include="Filters\PixelFilter.cs" />
     <Compile Include="Filters\Tranform\FreeTransformer.cs" />
     <Compile Include="Filters\Tranform\ITransformer.cs" />

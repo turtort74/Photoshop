@@ -10,7 +10,7 @@ namespace MyPhotoshop
   	    ParameterInfo[] GetParameters();
         /// <summary>
         /// Этот метод принимает фотографию, которую надо обрабатывать, и численные значения всех параметров
-        /// Длина массива values в точности равна длине массива, возвращаемого методом GetParameters
+        /// Длина массива values в точности равна длине массива, возвращаемого методом GetDescription
         /// </summary>
         /// <param name="original"></param>
         /// <param name="values"></param>
